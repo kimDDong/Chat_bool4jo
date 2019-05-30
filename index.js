@@ -5,12 +5,14 @@ var io = require('socket.io')(http);
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
- 
+var count = 1;
 io.on('connection', function(socket){
-  console.log('a user connected');
-  io.emit('chat message', "Please Hi to new Chatter.");
+  var name = "user " + count++;
+  console.log(name + ' is connected');
+  io.emit('chat message', name + " enter the room.");
   socket.on('disconnect', function(){
-    console.log('user disconnected');
+    console.log(name + ' is disconnected');
+    io.emit('chat message', name + " leave the room.");
   });
   socket.on('chat message', function(msg){
     console.log('message: ' + msg);

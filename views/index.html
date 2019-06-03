@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Index page</title>
+</head>
+<body>
+ <form action="/" method="POST">
+  <p>Username : <input type="text" name="name"></p>
+  <p>Password : <input type="password" name="pwd"></p>
+  <input type="submit" value="Login">
+ </form>
+ <form action="/register" method="GET">
+  <input type="submit" value="Register"> 
+ </form>
+
+<% if(alert == true){ %>
+<script text = "type/javascript">
+ alert('Non exist username or Wrong Password');
+ </script>
+<% }  %>
+</body>
+</html>
+

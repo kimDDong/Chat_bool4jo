@@ -39,13 +39,13 @@ app.post('/register', function(req, res){
 	var name = req.body.name;
 	var pwd = req.body.pwd;
 	var pwdconf = req.body.pwdconf;
-	var rname = req.body.rname;
+	var realname = req.body.realname;
 
 
-	console.log(name, pwd, rname);
+	console.log(name, pwd, realname);
 	//db에 쿼리 날리기
 	var sql = 'INSERT INTO user_info VALUES(?, ?, ?)';
-	connection.query(sql, [name, pwd, rname], function(error, results, fields){
+	connection.query(sql, [name, pwd, realname], function(error, results, fields){
 		console.log(results);
 	});
 
@@ -102,7 +102,7 @@ app.post('/', function(req, res){
 			var db_pwd = results[0].password;
 
 			if(pwd  == db_pwd){
-				res.render('welcome.html', { username: results[0].rname});
+				res.render('welcome.html', { username: results[0].realname});
 			}else{
 				res.render('index.html' ,{ alert: true});
 			}

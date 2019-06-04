@@ -7,15 +7,15 @@ $(function() {
 
     // login 에 대한 listening
     socket.on("login", function (data) {
-        $("#chatLog").append("<li><strong>"+data+"</strong> has entered</li>");
+        $("#chatLog").append("<li><strong>"+data.realname+"</strong> has entered</li>");
     });
     // logout 에 대한 listening
     socket.on("logout", function (data) {
-        $("#chatLog").append("<li><strong>"+data+"</strong> has exited</li>");
+        $("#chatLog").append("<li><strong>"+data.realname+"</strong> has exited</li>");
     });
     // chat 에 대한 listening
     socket.on("chat", function (data) {
-        $("#chatLog").append("<li><string>"+data.username+"</strong> : "+data.msg+"</li>");
+        $("#chatLog").append("<li><string>"+data.realname+"</strong> : "+data.msg+"</li>");
     });
 
     // form submit

@@ -16,7 +16,7 @@ var connection = mysql.createConnection({
 	host: 'localhost',
 	user: 'root',
 	post: 3307,
-	password: '1234',
+	password: '',
 	database: 'my_db'});
 
 connection.connect(function (err){
@@ -40,14 +40,12 @@ app.post('/register', function(req, res){
 	var pwd = req.body.pwd;
 	var pwdconf = req.body.pwdconf;
 	var rname = req.body.rname;
-	var gender = req.body.gender;
-	var birth = req.body.birth;
-	var nname = rname; //default : nickname = realname
 
-	console.log(name, pwd, rname, gender, birth, nname);
+
+	console.log(name, pwd, rname);
 	//db에 쿼리 날리기
-	var sql = 'INSERT INTO user_info VALUES(?, ?, ?, ?, ?, ?)';
-	connection.query(sql, [name, pwd, rname, gender, birth, nname], function(error, results, fields){
+	var sql = 'INSERT INTO user_info VALUES(?, ?, ?)';
+	connection.query(sql, [name, pwd, rname], function(error, results, fields){
 		console.log(results);
 	});
 
@@ -104,7 +102,7 @@ app.post('/', function(req, res){
 			var db_pwd = results[0].password;
 
 			if(pwd  == db_pwd){
-				res.render('welcome.html', { username: results[0].nickname});
+				res.render('welcome.html', { username: results[0].rname});
 			}else{
 				res.render('index.html' ,{ alert: true});
 			}

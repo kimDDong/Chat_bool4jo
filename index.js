@@ -100,9 +100,10 @@ app.post('/', function(req, res){
 		}
 		else{
 			var db_pwd = results[0].password;
+			var realname = results[0].realname;
 
 			if(pwd  == db_pwd){
-				res.render('welcome.html', { username: results[0].realname});
+				res.render('welcome.html', { username: realname});
 			}else{
 				res.render('index.html' ,{ alert: true});
 			}

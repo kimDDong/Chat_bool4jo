@@ -1,30 +1,71 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>Socket.io chat</title>-->
+<!--    <style>-->
+<!--      * { margin: 0; padding: 0; box-sizing: border-box; }-->
+<!--      body { font: 13px Helvetica, Arial; }-->
+<!--      form { background: #000; padding: 0px; position: fixed; bottom: 0; width: 100%; }-->
+<!--      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }-->
+<!--      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }-->
+<!--      #messages { list-style-type: none; margin: 0; padding: 0; }-->
+<!--      #messages li { padding: 5px 10px; }-->
+<!--      #messages li:nth-child(odd) { background: #eee; }-->
+<!--    </style>-->
+<!--  </head>-->
+<!--<body>-->
+<!-- <h3>Welcome, <%= username%>!</h3>-->
+<!-- <div id = "chatLog"></div>-->
+<!-- <form id = "myForm">-->
+<!--     <input id = "msgForm" type = "text" autocomplete="off" />-->
+<!--     <button><input type = "button" value = "Send" style="background-color:rgb(130, 224, 255);"></button>-->
+<!-- </form>-->
+<!--<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>-->
+<!--<script src = "/socket.io/socket.io.js"></script>-->
+<!--<script src = "javascript/chat.js"></script>-->
+<!--<script type = "text/javascript">-->
+<!--    username = '<%= username%>';-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!------ Include the above in your HEAD tag ---------->
+
 <!DOCTYPE html>
+
 <html>
-<head>
-    <title>Socket.IO chat</title>
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font: 13px Helvetica, Arial; }
-      form { background: #000; padding: 0px; position: fixed; bottom: 0; width: 100%; }
-      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
-      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
-      #messages { list-style-type: none; margin: 0; padding: 0; }
-      #messages li { padding: 5px 10px; }
-      #messages li:nth-child(odd) { background: #eee; }
-    </style>
-  </head>
+<head >
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel = "stylesheet"  href =  "css/chat.css"/>
+</head>
 <body>
- <h3>Welcome, <%= username%>!</h3>
- <div id = "chatLog"></div>
- <form id = "myForm">
-     <input id = "msgForm" type = "text" autocomplete="off" />
-     <button><input type = "button" value = "Send" style="background-color:rgb(130, 224, 255);"></button>
- </form>
+<div class="col-sm-3 col-sm-offset-4 frame" style="margin-top : 20px; height: 500px">
+    <div id="chatpanel">
+      <ul id=chatLog style="color: black;"></ul>
+    </div>
+    <div>
+        <form id="myform">
+            <div class="msj-rta macro" style="margin-left: 10px;width : 340px; margin-bottom: 10px">
+                <div class="text text-r">
+                    <input class="mytext" id="msgForm" placeholder="Type a message"/>
+                </div>
+                <form id = "form">
+                    <button style="margin-right : 5px;background-color:rgb(130, 224, 255);"><input type = "button" value = "Send"></button>
+                </form>
+                <a href="#my-id" uk-scroll></a><a id="js-scroll-trigger" href="#my-id" uk-scroll></a>
+
+            </div>
+        </form>
+    </div>
+</div>
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src = "/socket.io/socket.io.js"></script>
 <script src = "javascript/chat.js"></script>
-<script type = "text/javascript">
-    username = '<%= username%>';
+<script type="text/javascript">
+    username= `<%= username%>`;
 </script>
 </body>
 </html>

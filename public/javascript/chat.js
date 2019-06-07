@@ -16,6 +16,7 @@ $(function() {
     // chat 에 대한 listening
     socket.on("chat", function (data) {
         $("#chatLog").append("<li><strong>"+username+"</strong> : "+data.msg+"</li>");
+        $("#chatLog").scrollTop($("#chatLog")[0].scrollHeight);
     });
 
     // form submit

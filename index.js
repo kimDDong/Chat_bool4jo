@@ -111,7 +111,12 @@ app.post('/', function(req, res){
 	});
 });
 
-
+// app.get('/find', function(req, res){
+// 	res.render('find.html');
+// });   
+app.get('/index', function(req, res){
+	res.render('index.html');
+});   
 app.get('/register', function(req, res){
 	res.render('register.html');
 });

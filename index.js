@@ -36,7 +36,6 @@ var io = require('socket.io')(server);
 app.get('/', function (req, res) {
   res.render('index.html', {alert: false});
 });
-
 app.post('/register', function(req, res){
 	var name = req.body.name;
 	var pwd = req.body.pwd;
@@ -76,7 +75,7 @@ io.on('connection', function (socket) {
 	// 소켓으로부터 disconnect 에 대한 listening
 	socket.on('disconnect', function () {
 		socket.broadcast.emit('logout', socket.username);
-		console.log("『" + data.username + '』 is disconnected.');
+		console.log("『" + socket.username + '』 is disconnected.');
 	});
 });
 
@@ -95,7 +94,6 @@ server.listen(8000, function () {
 
 app.get('/', function(req, res) {
 	res.render('index.html', {alert: false});
-
 });
 
 app.post('/', function(req, res){
@@ -108,7 +106,6 @@ app.post('/', function(req, res){
 		if(results.length == 0)
 		{
 			res.render('index.html' ,{ alert: true});
-			alert("Input your information");
 		}
 		else{
 			var db_pwd = results[0].password;
@@ -117,9 +114,7 @@ app.post('/', function(req, res){
 			if(pwd  == db_pwd){
 				res.render('welcome.html', { username: realname});
 			}else{
-			//	alert("Not match your password");
-				res.render('index.html' , { alert: true});
-
+				res.render('index.html' ,{ alert: true});
 			}
 		}
 	});

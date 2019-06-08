@@ -5,12 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-	<embed name="gradius" src="/music/gradius.mp3" loop="true" hidden="true" autostart="true">
 	<title>Register page</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
 	<script src = "/javascript/my-js.js"></script>
 	<style type="text/css">
 		body{
@@ -24,9 +23,9 @@
 			color: #969fa4;
 		}
 		.form-control:focus{
-			border-color: #3598dc;
+			border-color: #5cb85c;
 		}
-	    .form-control, .btn{
+	    .form-control, .btn{        
 	        border-radius: 3px;
 	    }
 		.signup-form{
@@ -36,7 +35,7 @@
 		}
 		.signup-form h2{
 			color: #636363;
-			margin: 10px 0 25px;
+	        margin: 0 0 15px;
 			position: relative;
 			text-align: center;
 	    }
@@ -48,7 +47,7 @@
 			position: absolute;
 			top: 50%;
 			z-index: 2;
-		}
+		}	
 		.signup-form h2:before{
 			left: 0;
 		}
@@ -74,12 +73,11 @@
 		.signup-form input[type="checkbox"]{
 			margin-top: 3px;
 		}
-		.signup-form .btn{
+		.signup-form .btn{        
 	        font-size: 16px;
 	        font-weight: bold;
-	        background: #3598dc;
+	        background: #3598dc;		
 			min-width: 140px;
-			border: none;
 	        outline: none !important;
 	    }
 		.signup-form .row div:first-child{
@@ -87,7 +85,7 @@
 		}
 		.signup-form .row div:last-child{
 			padding-left: 10px;
-		}
+		}    	
 	    .signup-form a{
 			color: #fff;
 			text-decoration: underline;
@@ -98,10 +96,10 @@
 		.signup-form form a{
 			color: #5cb85c;
 			text-decoration: none;
-		}
+		}	
 		.signup-form form a:hover{
 			text-decoration: underline;
-		}
+		}  
 	</style>
 </head>
 <body>
@@ -120,7 +118,7 @@
         </div>
         <div class="form-group">
         	<input type="text" class="form-control" name="realname" placeholder="Realname" required="required">
-        </div>
+        </div>  
 		<div class="form-group">
             <button type="submit" class="btn btn-success btn-lg btn-block">Register Now</button>
         </div>
@@ -128,4 +126,4 @@
 	<div class="text-center">Already have an account? <a href="/index" method = "GET">Sign in</a></div>
 </div>
 </body>
-</html>
+</html>                            

@@ -58,8 +58,16 @@
                 <a href="#my-id" uk-scroll></a><a id="js-scroll-trigger" href="#my-id" uk-scroll></a>
             </div>
             <div style="position: fixed; bottom: 5px; right: 5px;">
-            <a href="/index" method="GET"><button type="button" style="background-color:rgb(130, 224, 255); border : 0">LOGOUT<a href="/index" method="GET"></button></a>
+                <a href="/index" method="GET"><button type="button" style="background-color:rgb(130, 224, 255); border : 0">LOGOUT</button></a>
             </div>
+           <!--  <div style="position: fixed; top: 5px; right: 5px;">
+                <a href="/audio" method="GET"><audio src="gradius.mp3" autoplay controls></audio>
+              <div id="sound">
+                <audio controls preload="metadata">
+                    <a href="/audio" method="GET"><source src="audio/gradius.mp3" type="audio/mp3">
+                </audio>
+              </div>
+            </div> -->
         </form>
     </div>
 </div>
@@ -67,7 +75,7 @@
 <script src = "/socket.io/socket.io.js"></script>
 <script src = "javascript/chat.js"></script>
 <script type="text/javascript">
-    username= `<%= username%>`;
+    username= '<%= username%>';
 </script>
 </body>
 </html>

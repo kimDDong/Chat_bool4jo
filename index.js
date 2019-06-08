@@ -4,6 +4,7 @@ var app = express();
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
+app.engine('mp3', require('ejs').renderFile);
 
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: false}));
@@ -59,13 +60,13 @@ app.post('/register', function(req, res){
 io.on('connection', function (socket) {
 	// 소켓으로부터 login 에 대한 listening
 	socket.on('login', function (data) {
-		console.log('client logged-in:' + data.username);
+		console.log("『" + data.username + '』 is connected.');
 		socket.username = data.username;
 		io.emit('login', data.username);
 	});
 	// 소켓으로부터 chat 에 대한 listening
 	socket.on('chat', function (data) {
-		console.log('Message form %s: %s', socket.username, data.msg);
+		console.log('%s : %s', socket.username, data.msg);
 		var msg = {
 			username: socket.username,
 			msg: data.msg
@@ -75,9 +76,17 @@ io.on('connection', function (socket) {
 	// 소켓으로부터 disconnect 에 대한 listening
 	socket.on('disconnect', function () {
 		socket.broadcast.emit('logout', socket.username);
-		console.log('user disconnected: ' + socket.username);
+		console.log("『" + data.username + '』 is disconnected.');
 	});
 });
+
+// var fs = require('fs');
+// app.get('/audio', function(req, res){
+// 	fs.readFile('gradius.mp3', function(error, data){
+// 		res.pipe();
+// 		res.end(data);
+// 	});
+// });
 
 
 server.listen(8000, function () {
@@ -116,8 +125,8 @@ app.post('/', function(req, res){
 	});
 });
 
-// app.get('/find', function(req, res){
-// 	res.render('find.html');
+// app.get('/audio', function(req, res){
+// 	res.render('gradius.mp3');
 // });   
 app.get('/index', function(req, res){
 	res.render('index.html');

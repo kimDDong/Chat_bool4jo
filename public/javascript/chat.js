@@ -7,11 +7,11 @@ $(function() {
 
     // login 에 대한 listening
     socket.on("login", function (data) {
-        $("#chatLogIn").append("<li><strong>『"+data+"』</strong> 님이 입장하셨습니다.</li>");
+        $("#chatLog").append("<li style ='color : yellow; text-align:right '><strong>『"+data+"』</strong> 님이 입장하셨습니다.</li>");
     });
     // logout 에 대한 listening
     socket.on("logout", function (data) {
-        $("#chatLogout").append("<li><strong>『"+data+"』</strong> 님이 퇴장하셨습니다.</li>");
+        $("#chatLog").append("<li style ='color : red;text-align:right'><strong>『"+data+"』</strong> 님이 퇴장하셨습니다.</li>");
     });
     // chat 에 대한 listening
     socket.on("chat", function (data) {

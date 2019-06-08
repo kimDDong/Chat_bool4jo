@@ -7,15 +7,16 @@ $(function() {
 
     // login 에 대한 listening
     socket.on("login", function (data) {
-        $("#chatLog").append("<li><strong>"+data+"</strong> has entered</li>");
+        $("#chatLogIn").append("<li><strong>"+data+"</strong> 님이 입장하셨습니다.</li>");
+
     });
     // logout 에 대한 listening
     socket.on("logout", function (data) {
-        $("#chatLog").append("<li><strong>"+data+"</strong> has exited</li>");
+        $("#chatLogOut").append("<li><strong>"+data+"</strong> 님이 퇴장하셨습니다.</li>");
     });
     // chat 에 대한 listening
     socket.on("chat", function (data) {
-        $("#chatLog").append("<li><strong>"+username+"</strong> : "+data.msg+"</li>");
+        $("#chatLog").append("<li><strong>"+data.username+"</strong> : "+data.msg+"</li>");
         $("#chatLog").scrollTop($("#chatLog")[0].scrollHeight);
     });
 
@@ -27,4 +28,5 @@ $(function() {
         socket.emit("chat", { msg: $msgForm.val() });
         $msgForm.val("");
     });
+   //  $("logout").css("margin-top", "-459px");
 });

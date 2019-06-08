@@ -35,6 +35,7 @@ var io = require('socket.io')(server);
 app.get('/', function (req, res) {
   res.render('index.html', {alert: false});
 });
+
 app.post('/register', function(req, res){
 	var name = req.body.name;
 	var pwd = req.body.pwd;
@@ -85,6 +86,7 @@ server.listen(8000, function () {
 
 app.get('/', function(req, res) {
 	res.render('index.html', {alert: false});
+
 });
 
 app.post('/', function(req, res){
@@ -97,6 +99,7 @@ app.post('/', function(req, res){
 		if(results.length == 0)
 		{
 			res.render('index.html' ,{ alert: true});
+			alert("Input your information");
 		}
 		else{
 			var db_pwd = results[0].password;
@@ -105,7 +108,9 @@ app.post('/', function(req, res){
 			if(pwd  == db_pwd){
 				res.render('welcome.html', { username: realname});
 			}else{
-				res.render('index.html' ,{ alert: true});
+			//	alert("Not match your password");
+				res.render('index.html' , { alert: true});
+
 			}
 		}
 	});

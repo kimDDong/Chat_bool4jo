@@ -40,9 +40,18 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <link rel = "stylesheet"  href =  "css/chat.css"/>
+    <!-- <link rel= "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" /> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
 </head>
 <body style="background-color: #63738a;">
+<<<<<<< HEAD
 <div class="col-sm-3 col-sm-offset-4 frame" style="margin-top : 20px; height: 500px; margin-left: 540px;background-color: #ffc0cb">
+=======
+<div class="col-sm-3 col-sm-offset-4 frame">
+>>>>>>> master
     <div id="chatpanel">
       <ul id=chatLogIn style="margin-inside : 10px;color : gray"></ul>
         <ul id=chatLog style="color: black;"></ul>
@@ -63,16 +72,8 @@
                 <a href="#my-id" uk-scroll></a><a id="js-scroll-trigger" href="#my-id" uk-scroll></a>
             </div>
             <div style="position: fixed; bottom: 5px; right: 5px;">
-                <a href="/index" method="GET"><button type="button" style="background-color:rgb(130, 224, 255); border : 0">LOGOUT</button></a>
+                <a href="/index" method="GET"><button type="button" style="background-color:rgba(0,0,0,0); border : 0"><span style="color:white"><i class="fa fa-lock fa-3x"></i></span></button></a>
             </div>
-           <!--  <div style="position: fixed; top: 5px; right: 5px;">
-                <a href="/audio" method="GET"><audio src="gradius.mp3" autoplay controls></audio>
-              <div id="sound">
-                <audio controls preload="metadata">
-                    <a href="/audio" method="GET"><source src="audio/gradius.mp3" type="audio/mp3">
-                </audio>
-              </div>
-            </div> -->
         </form>
     </div>
 </div>

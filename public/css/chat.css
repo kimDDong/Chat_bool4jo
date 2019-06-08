@@ -35,13 +35,19 @@
 }
 .frame{
     background:#e0e0de;
-    height:450px;
     overflow:hidden;
     padding:0;
+    border-radius: 3px;
+    top: 20px;
+    margin : 0 auto;
+    width: 385px;
+    height: 500px;
+    float: none;
 }
 .frame > div:last-of-type{
     position:absolute;bottom:0;width:100%;display:flex;
 }
+
 body > div > div > div:nth-child(2) > span{
     background: whitesmoke;padding: 10px;font-size: 21px;border-radius: 50%;
 }

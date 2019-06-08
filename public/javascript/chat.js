@@ -7,18 +7,23 @@ $(function() {
 
     // login 에 대한 listening
     socket.on("login", function (data) {
-        $("#chatLog").append("<li style ='color : yellow; text-align:center;background-color:darkgray;" +
-            "margin-left: 20px; margin-right: 20px;'><strong>『"+data+"』</strong> 님이 입장하셨습니다.</li>");
+        $("#chatLog").append("<li style ='color : white; text-align:center;background-color:#63738a;;" +
+            "margin-left: -18px; margin-right: -18px;'><strong>『"+data+"』</strong> 님이 입장하셨습니다.</li>");
 
     });
     // logout 에 대한 listening
     socket.on("logout", function (data) {
-        $("#chatLog").append("<li style ='color : red;text-align:center;background-color:darkgray;margin-left: 20px; " +
-            "margin-right: 20px;'><strong>『"+data+"』</strong> 님이 퇴장하셨습니다.</li>");
+        $("#chatLog").append("<li style ='color : white;text-align:center;background-color:#63738a;margin-left: -18px; " +
+            "margin-right: -18px;'><strong>『"+data+"』</strong> 님이 퇴장하셨습니다.</li>");
     });
     // chat 에 대한 listening
     socket.on("chat", function (data) {
-        $("#chatLog").append("<li><strong>"+data.username+"</strong> : "+data.msg+"</li>");
+    	if(username == data.username){
+	        $("#chatLog").append("<li style ='text-align:right;background-color:#ffb8c6;margin-left: -18px; margin-right: -18px; '><strong>"+"</strong>"+data.msg+"</li>");
+    	}
+    	else{
+	        $("#chatLog").append("<li style ='text-align:left;background-color:#f9c6cf;margin-left: -18px; margin-right: -18px; '><strong>"+data.username+"</strong> : "+data.msg+"</li>");
+    	}
         $("#chatLog").scrollTop($("#chatLog")[0].scrollHeight);
     });
 

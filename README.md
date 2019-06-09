@@ -24,7 +24,7 @@
 <p align="center">
 	<img src="https://s.nimbusweb.me/attachment/2960100/dn3stype386kat9wc323/Z5gMvwbFg9czRm2D/screenshot-localhost-8000-2019.06.08-23-34-56.png" width="30%"></img>
 	<img src="https://s.nimbusweb.me/attachment/2960105/987fc7l9emr6inkd7kre/fJrDbhsLbhsPiWN4/screenshot-localhost-8000-2019.06.08-23-41-12.png" width="30%"></img>
-	<img src="https://s.nimbusweb.me/attachment/2960158/qa7tt1yartqzefiaaq1w/TTyZn2SIeZmJE6Hb/screenshot-localhost-8000-2019.06.09-00-36-37.png" width=30%></img>
+	<img src="https://s.nimbusweb.me/attachment/2960810/toyhefbnzw6sk89tfctr/cAwTvlsikcxCHVC9/screenshot-localhost-8000-2019.06.09-17-31-00.png" width=30%></img>
 </p>
 
 ## Contributors

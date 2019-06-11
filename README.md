@@ -16,9 +16,9 @@
 * The project was started for open source development class PBL2, at Hanyang University Erica Campus.
 
 ## Features
-*
-*
-*
+* Easy to register and login for chatting
+* Support 'logout'
+* BGM for your chatting
 
 ## Preview
 <p align="center">

@@ -1,5 +1,6 @@
 <p align="center">
 	<img src="https://i.postimg.cc/Zn6dNpnQ/image.png"></img>
+	<img src="https://raw.githubusercontent.com/kimDDong/Chat_bool4jo/master/icon.png" width = "15%" height = "15%">
 </p>
 
 <p align="center">

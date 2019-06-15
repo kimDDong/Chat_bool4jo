@@ -11,6 +11,9 @@
 	<a href="https://socket.io/"><img src="https://img.shields.io/badge/-Socket.io-yellowgreen.svg"></img></a>
 </p>
 
+  
+## Documentation
+* Checkout [wiki.md](https://github.com/kimDDong/Chat_bool4jo/blob/master/wiki.md)
 
 ## Introduction
 * Chat_bool4jo is simple web application for chatting.

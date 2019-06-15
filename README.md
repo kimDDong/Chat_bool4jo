@@ -43,3 +43,7 @@
 [MIT](http://opensource.org/licenses/MIT)
 
 Copyright (c) 2019 bool4jo
+
+## CREDIT
+ - BGM
+	[creative-minds](https://www.bensound.com/royalty-free-music/track/creative-minds)
